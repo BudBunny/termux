@@ -1,0 +1,11 @@
+--- ../emacs.orig/lisp/cus-start.el	2019-12-26 17:20:12.000000000 +0100
++++ ./lisp/cus-start.el	2019-12-27 14:18:51.628517987 +0100
+@@ -290,7 +290,7 @@
+ 			  "/tmp"))
+ 		     (t
+ 		      (or (getenv "TMPDIR") (getenv "TMP") (getenv "TEMP")
+-			  "/tmp"))))
++			  "@TERMUX_PREFIX@/tmp"))))
+ 	      :initialize custom-initialize-delay)
+ 	     ;; fns.c
+ 	     (use-dialog-box menu boolean "21.1")
